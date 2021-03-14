@@ -1,11 +1,24 @@
+/* css for main container */
 .container{
   text-align: center;
 }
-form{
-  display: flex;
-  justify-content: center;
+/* css for table */
+table{
+  text-align: center;
+  margin: 10px auto;
+  border: 1px solid;
 }
-.selectDrpDown{
-  width: 25%;
-  text-align: left;
+table tr td{text-align: left;}
+.react-bootstrap-table-pagination-list ul{
+  list-style-type: none;
+  text-align: center;
+}
+.react-bootstrap-table-pagination-list ul li{
+  float: left;
+  background-color: grey;
+  margin: 0 1px;
+  padding: 10px;
+}
+.react-bootstrap-table-pagination-list ul li a{
+  color: #fff;
 }
