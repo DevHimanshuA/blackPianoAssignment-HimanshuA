@@ -1,24 +1,25 @@
 import React from 'react';
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route,NavLink} from "react-router-dom";
+// importing all components necessary for routing
 import Home from './Components/Home';
 import About from './Components/About';
-import Users from './Components/Users';
+import Users from './Components/Customer';
 
 // functional component named - 'App'
 const App = () => {
     return (
       <Router>
-        <div>
+        <div class="main-wrapper">
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <NavLink to="/Components/Home">Home</NavLink>
                     </li>
                     <li>
-                        <Link to="/Components/About">About</Link>
+                        <NavLink to="/Components/About">About</NavLink>
                     </li>
                     <li>
-                        <Link to="/Components/Users">Users</Link>
+                        <NavLink to="/Components/Customer">Users</NavLink>
                     </li>
                 </ul>
             </nav>
@@ -26,7 +27,7 @@ const App = () => {
                 <Route path="/Components/About">
                     <About />
                 </Route>
-                <Route path="/Components/Users">
+                <Route path="/Components/Customer">
                     <Users />
                 </Route>
                 <Route path="/">

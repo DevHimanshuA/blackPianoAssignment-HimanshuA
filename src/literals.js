@@ -1,8 +1,13 @@
 let Literals = {
-    pageHeading: "Our Customer Data",
+    pageHeadings: {
+        homePage: "Home Page",
+        customerPage: "Our Customer Data",
+        aboutPage: "About Page"
+    },
     labels: {
         name: "Name",
-        smallText: "search filter on name"
+        smallText: "search filter on name",
+        aboutContent: "Please find below the points to be taken care in this assignment application"
     },
     btn:{
         searchBtn: "Search"

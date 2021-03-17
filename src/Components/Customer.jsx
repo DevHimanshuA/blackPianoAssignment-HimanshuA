@@ -9,8 +9,9 @@ import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import Literals from '../literals';
 // for modern dropdown - here we use react-select
 import Select from 'react-select';
-// functional Component for User's
-const Users = () =>{
+// functional Component for - Customer
+
+const Customer = () =>{
     // setting up hooks for 'All Customer' Data
     const [customerAllData,setCustomerAllData] = useState([]);
     // setting up hooks for 'Customer' Data based on their 'name' and populate it into dropdown
@@ -66,14 +67,19 @@ const Users = () =>{
       })
     }
     return(
-        <div className="container">
-            <h2>{Literals.pageHeading}</h2>
+        <div className="root-container">
+            <h2>{Literals.pageHeadings.customerPage}</h2>
             <label>{Literals.labels.name} <span>({Literals.labels.smallText})</span></label>
-            <Select options={customerName} value={selectedCustomerName} onChange={(e)=>handleChange(e)}/>
-            <BootstrapTable bordered={true} defaultSorted={Literals.defaultSorted} keyField='name' data={customerAllData} columns={Literals.columns} 
-            pagination={paginationFactory({sizePerPage:3,hideSizePerPage:true,hidePageListOnlyOnePage: true})}/>
-            <button disabled={disabledSearch} onClick={()=>{handleSearch(selectedCustomerName)}}>{Literals.btn.searchBtn}</button>
+            <div className="search-filter">              
+              <Select options={customerName} value={selectedCustomerName} onChange={(e)=>handleChange(e)} className="name-dropdown"
+              isClearable={true}/>
+              <button disabled={disabledSearch} onClick={()=>{handleSearch(selectedCustomerName)}}>{Literals.btn.searchBtn}</button>
+            </div>
+            <BootstrapTable bordered={true} striped  hover condensed defaultSorted={Literals.defaultSorted} 
+            keyField='name' data={customerAllData} columns={Literals.columns} pagination={paginationFactory({sizePerPage:3,hideSizePerPage:true,hidePageListOnlyOnePage: true})}
+            wrapperClasses="bootstrap-table"/>
+            
         </div>
     );
 }
-export default Users;
+export default Customer;
