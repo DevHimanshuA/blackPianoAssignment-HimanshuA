@@ -1,5 +1,12 @@
 let Literals = {
     pageHeading: "Our Customer Data",
+    labels: {
+        name: "Name",
+        smallText: "search filter on name"
+    },
+    btn:{
+        searchBtn: "Search"
+    },
     columns: [{
         dataField: 'name',
         text: 'Name',

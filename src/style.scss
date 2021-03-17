@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
 }
 
 code {
@@ -14,4 +15,9 @@ code {
 /* Utility Classes */
 .wrapText{
   word-wrap: break-word;
+}
+.container{
+  label{
+    span{font-style: italic;font-size:12px;}
+  }
 }
