@@ -15,24 +15,35 @@ let Literals = {
     columns: [{
         dataField: 'name',
         text: 'Name',
-        sort: true
+        sort: true,
+        classes: 'wrapText',
+        headerClasses: 'wrapText'
     },{
         dataField: 'username',
         text: 'User Name',
-        sort: true
+        sort: true,
+        classes: 'wrapText',
+        headerClasses: 'wrapText'
     },{
         dataField: 'email',
         text: 'Email ID',
-        classes: 'wrapText'
+        classes: 'wrapText',
+        headerClasses: 'wrapText'
     },{
         dataField: 'address.street',
-        text: 'Address'
+        text: 'Address',
+        classes: 'wrapText',
+        headerClasses: 'wrapText'
     },{
         dataField: 'phone',
-        text: 'Contact Number'
+        text: 'Contact Number',
+        classes: 'wrapText',
+        headerClasses: 'wrapText'
     },{
         dataField: 'website',
-        text: 'WebSite'
+        text: 'WebSite',
+        classes: 'wrapText',
+        headerClasses: 'wrapText'
     }],
     defaultSorted : [{
         dataField: 'name',

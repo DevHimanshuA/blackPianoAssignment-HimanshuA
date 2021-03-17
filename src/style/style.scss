@@ -67,3 +67,12 @@ nav{
   }
 }
 /* css for 'root container' - end */
+
+/*  Media Queries - start*/
+/* Smartphones (portrait and landscape) ---------- */
+@media only screen and (min-width: 320px) and (max-width: 480px){
+  .root-container .search-filter .name-dropdown{
+      width: 75%;
+    }
+}
+/*  Media Queries - end*/
